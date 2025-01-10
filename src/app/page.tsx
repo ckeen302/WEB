@@ -37,8 +37,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <StatsSection />
+       
 
         {/* Our Team Section */}
         <OurTeamSection />
