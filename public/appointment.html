@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule an Appointment - VelciPet</title>
+  <link rel="stylesheet" href="/appointment.css">
+</head>
+<body>
+  <header>
+      <div class="container">
+          <a href="/" class="logo">
+              VelciPet
+          </a>
+          <nav>
+              <a href="/">Home</a>
+          </nav>
+      </div>
+  </header>
+
+  <main>
+      <div class="container">
+          <h1>Schedule an Appointment</h1>
+          <form id="appointmentForm">
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input type="text" id="firstName" name="firstName" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" id="lastName" name="lastName" required>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="petName">Pet's Name</label>
+                  <input type="text" id="petName" name="petName" required>
+              </div>
+              <div class="form-group">
+                  <label for="petType">Pet Type</label>
+                  <select id="petType" name="petType" required>
+                      <option value="">Select pet type</option>
+                      <option value="dog">Dog</option>
+                      <option value="cat">Cat</option>
+                      <option value="other">Other</option>
+                  </select>
+              </div>
+              <div class="form-group" id="otherPetTypeGroup" style="display: none;">
+                  <label for="otherPetType">Specify Pet Type</label>
+                  <input type="text" id="otherPetType" name="otherPetType">
+              </div>
+              <div class="form-group">
+                  <label for="service">Service Requested</label>
+                  <select id="service" name="service" required>
+                      <option value="">Select service</option>
+                      <option value="preventativeCare">Preventative Care</option>
+                      <option value="surgery">Surgery</option>
+                      <option value="emergency">Emergency</option>
+                      <option value="other">Other</option>
+                  </select>
+              </div>
+              <div class="form-group" id="otherServiceGroup" style="display: none;">
+                  <label for="otherService">Specify Service</label>
+                  <input type="text" id="otherService" name="otherService">
+              </div>
+              <div class="form-group">
+                  <label for="appointmentTime">Preferred Appointment Time</label>
+                  <input type="datetime-local" id="appointmentTime" name="appointmentTime" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" required>
+              </div>
+              <button type="submit">Schedule Appointment</button>
+          </form>
+      </div>
+  </main>
+
+  <script src="/appointment.js"></script>
+</body>
+</html>
