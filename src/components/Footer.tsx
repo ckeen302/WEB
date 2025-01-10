@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Footer Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8 border-t border-gray-200">
           {/* Brand Column */}
-          <div>
+          <div className="mb-8 md:mb-0">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary">
                 <PawPrint className="w-5 h-5 text-white" />
@@ -40,10 +40,17 @@ export default function Footer() {
               <span className="text-xl font-bold text-primary">VelciPet</span>
             </Link>
             <p className="text-gray-600">Compassionate care for your beloved pets.</p>
+            {/* Hours of Operation */}
+            <div className="mt-4">
+              <h4 className="text-lg font-semibold mb-2">Hours of Operation</h4>
+              <p className="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
+              <p className="text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
+              <p className="text-gray-600">Sunday: Closed</p>
+            </div>
           </div>
 
           {/* Quick Links Column */}
-          <div>
+          <div className="mb-8 md:mb-0 md:pl-12">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="text-gray-600 hover:text-primary">Home</Link></li>
@@ -56,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* Services Column */}
-          <div>
+          <div className="mb-8 md:mb-0 md:pl-12">
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               <li className="text-gray-600">Preventative Care</li>
@@ -67,9 +74,9 @@ export default function Footer() {
           </div>
 
           {/* Connect Column */}
-          <div>
+          <div className="md:pl-12">
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-            <div className="flex justify-between items-center max-w-[120px]">
+            <div className="flex space-x-4">
               <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary">
                 <Facebook className="h-6 w-6" />
               </Link>
@@ -86,4 +93,3 @@ export default function Footer() {
     </footer>
   );
 }
-
