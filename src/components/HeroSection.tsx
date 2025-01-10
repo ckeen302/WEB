@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export default function HeroSection() {
   return (
-    <section id="home" className="bg-blue-50 py-20 scroll-mt-20">
+    <section id="home" className="bg-blue-50 py-20 scroll-mt-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
@@ -16,13 +16,14 @@ export default function HeroSection() {
               <Button size="lg">Schedule an Appointment</Button>
             </Link>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 relative">
+            <div className="absolute inset-0 bg-blue-50 rounded-lg filter blur-xl transform scale-105"></div>
             <Image 
-              src="/placeholder.svg?height=400&width=600" 
+              src="/Image/hero.jpg" 
               alt="Happy pets" 
-              width={600} 
+              width={650}  // Updated width from 600 to 650
               height={400} 
-              className="rounded-lg shadow-md" 
+              className="rounded-lg shadow-md relative z-10" 
             />
           </div>
         </div>
